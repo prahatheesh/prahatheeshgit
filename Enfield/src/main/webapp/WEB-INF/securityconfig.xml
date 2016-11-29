@@ -1,0 +1,31 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xmlns:webflow-config="http://www.springframework.org/schema/webflow-config"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/security 
+       http://www.springframework.org/schema/security/spring-security.xsd">
+
+<security:http auto-config="true" use-expressions="true">
+<security:intercept-url pattern="" access="permitALL"/>
+<security:intercept-url pattern="" access="hasrole('ROLE_ADMIN')"/>
+<security:intercept-url pattern="" access="hasanyrole('ROLE_ADMIN,ROLE_USER')"/>
+<security:form-login login-page="" login-processing-url="/process_login" default-target-url="" authentication-failure-url="/login?error"/>
+<security:logout logout-success-url="/login?logout"/>
+<security:csrf disabled="true"/>
+</security:http>
+
+<security:authentication-manager>
+<security:authentication-provider>
+<security:jdbc-user-service 
+
+data-source-ref="datasource"
+authorities-by-username-query="SELECT emailname, authoriti0es FROM authorities WHERE emailname =?"
+users-by-username-query = "SELECT emailname, password, enabled FROM users WHERE emailname= ?"/>
+
+</security:authentication-provider>
+</security:authentication-manager>
+</beans>
+  -->
