@@ -26,9 +26,9 @@
          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CATEGORIES<span class="caret"></span></a>
          <ul class="dropdown-menu">
             <li><a href="categories?cat=CLASSIC">CLASSIC</a></li>
-            <li><a href="">THUNDERBIRD</a></li>
-            <li><a href="#">CONTINENTAL GT</a></li>
-            <li><a href="#">HIMALAYAN</a></li>
+            <li><a href="categories?cat=THUNDERBIRD">THUNDERBIRD</a></li>
+            <li><a href="categories?cat=CONTINENTAL-GT">CONTINENTAL GT</a></li>
+            <li><a href="categories?cat=HIMALAYAN">HIMALAYAN</a></li>
             </ul>
             </li>
             <li><a href="aboutus">ABOUT US</a></li>

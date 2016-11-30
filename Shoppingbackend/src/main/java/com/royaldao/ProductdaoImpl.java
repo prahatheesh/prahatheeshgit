@@ -73,17 +73,20 @@ public void edit(Product prod) {
     //session.close();*/
 	
 }
+
+@SuppressWarnings("unchecked")
+@Transactional
 public List<Product> prod(String category) 
 {
 	
 	// TODO Auto-generated method stub/
 	Session session = this.sessionfactory.openSession();
 	Criteria criteria = session.createCriteria(Product.class);
-	criteria.add(Restrictions.eq("PRODUCTCATEGORY",category));
+	criteria.add(Restrictions.eq("category",category));
 	
 	List<Product> list1 = criteria.list();
 	System.out.println(list1);
-	System.out.println(list1);
+	
 	return list1;
 
 }

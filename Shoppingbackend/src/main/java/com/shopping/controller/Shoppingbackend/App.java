@@ -1,6 +1,7 @@
 package com.shopping.controller.Shoppingbackend;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.royaldao.Productdao;
@@ -14,7 +15,7 @@ import com.royalservice.*;
 public class App 
 {
 	
-	public static void main( String[] args )
+	public static void main(String[] args)
     {
         @SuppressWarnings("resource")
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
@@ -41,7 +42,7 @@ public class App
         add2.setProductprice(7);
         add2.setProductmanufacturer("sshf");
         add2.setProductstrength("htrt");
-        add2.setProductCategory("");
+        add2.setCategory("category");
             
    
         pd.insert(add2);

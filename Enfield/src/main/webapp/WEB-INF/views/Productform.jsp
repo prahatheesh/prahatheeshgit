@@ -49,8 +49,8 @@
         <td><form:input class="form-control" path="productprice" /></td>
     </tr>  
        <tr>
-        <td><form:label path="productCategory">Product Category</form:label></td>
-        <td><form:input class="form-control" path="productCategory" /></td>
+        <td><form:label path="category">Product Category</form:label></td>
+        <td><form:input class="form-control" path="category" /></td>
     </tr>  
     <tr>
         <td colspan="2">

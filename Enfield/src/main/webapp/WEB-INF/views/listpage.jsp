@@ -31,7 +31,7 @@
 			<th>PRODUCT MANUFACTURER</th>
 			<th>PRODUCT PRICE</th>
 			<th>PRODUCT STRENGTH</th>
-			<th>PRODUCT CATEGORY</th>
+			<th>CATEGORY</th>
 			<th>delete/edit</th>
 			</tr>
 					<!--  for Each book b in books -->
@@ -44,7 +44,7 @@
 		  <th>${b.productmanufacturer}</th>
 		  <th>${b.productprice}</th>
 		  <th>${b.productstrength}</th>
-		  <th>${b.productCategory}</th>
+		  <th>${b.category}</th>
 		  
 		  
 		  <%-- <td><a href="getProductsByid/${b.pid}" >${b.pid}</a></td> --%> 

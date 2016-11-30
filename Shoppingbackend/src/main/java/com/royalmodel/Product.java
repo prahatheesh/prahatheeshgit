@@ -29,7 +29,7 @@ public class Product
 	@NotEmpty
 	private String pname;
 	@NotEmpty
-	private String productCategory;
+	private String category;
 	public int getPid() {
 		return pid;
 	}
@@ -60,12 +60,13 @@ public class Product
 	public void setPname(String pname) {
 		this.pname = pname;
 	}
-	public String getProductCategory() {
-		return productCategory;
+	public String getCategory() {
+		return category;
 	}
-	public void setProductCategory(String productCategory) {
-		this.productCategory = productCategory;
+	public void setCategory(String category) {
+		this.category = category;
 	}
+	
 	
 	
 }

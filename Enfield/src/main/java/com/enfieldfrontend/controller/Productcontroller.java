@@ -2,6 +2,7 @@ package com.enfieldfrontend.controller;
 
 import java.util.List;
 
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -39,10 +40,9 @@ public class Productcontroller {
 
 	 public ModelAndView printListcust(HttpServletRequest request)
 	 {
-		 
-		 List<Product> ptdt=pd.prod(request.getParameter("cat"));
+	 List<Product> list1=pd.prod(request.getParameter("cat"));
 		 ModelAndView pro=new ModelAndView("categories");
-		 pro.addObject("pro", ptdt);
+		 pro.addObject("categ", list1);
 		 return pro;
 	 }
 	 

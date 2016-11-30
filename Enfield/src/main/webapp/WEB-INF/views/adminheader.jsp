@@ -26,8 +26,11 @@
       <li><a href="adminAdd">ADD PRODUCTS</a></li>
       <li><a href="listproducts">VIEW PRODUCTS</a></li>
     </ul>
+    <c:if test="${sessionScope.name  ne null}">
+    <h1> Hai ${sessionScope.name}</h1>        
     <ul class="nav navbar-nav navbar-right">
       <li><a href="logout">LOGOUT</a></li>
+    </c:if>
     </ul>
   </div>
 </nav>
