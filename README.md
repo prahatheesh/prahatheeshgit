@@ -8,7 +8,7 @@ The following Softwares and Steps are required to run the application
 SOFTWARES:-
   FIRST DOWNLOAD & INSTALL
 * JDK
-* Eclipse
+* ECLIPSE
 * H2 HIBERNATE
 * APACHE TOMCAT SERVER(recommended version 8.0 and 7.0)
 * ATOM or SUBLIME TEXT
