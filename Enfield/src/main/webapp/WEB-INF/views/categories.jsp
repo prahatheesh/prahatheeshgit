@@ -35,6 +35,7 @@
 			<th>PRODUCT NAME</th>
 			<th>PRODUCT MANUFACTURER</th>
 			<th>PRODUCT PRICE</th>
+			<th>OPTIONS</th>
 </tr>
 
 <c:forEach items="${categ}" var="cat" >
