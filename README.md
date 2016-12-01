@@ -1,7 +1,7 @@
 # prahatheeshgit
 
 HELLO!! 
-Here i have uploaded my project which is an E-Commerce website based on ROYALENFIELD.
+Here i have uploaded my project which is an E-COMMERCE website based on ROYALENFIELD.In this site you can view specifications about the products and book a test ride at nearest dealer,you can create your own account which is authenticated and get the latest updates of the products.
 
 The following Softwares and Steps are required to run the application
 
