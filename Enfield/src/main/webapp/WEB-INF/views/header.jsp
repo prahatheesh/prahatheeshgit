@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>ROYAL ENFIELD</title>
+<title>ROYALENFIELD</title>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="resources/bootstrap-3.3.7-dist/css/bootstrap.min.css">

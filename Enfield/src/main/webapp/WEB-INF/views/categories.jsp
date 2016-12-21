@@ -18,7 +18,7 @@
   <style>
  body{
   margin: 0 auto;
-  background-image: url("resources/images/ef.jpg");
+  background-image: url("resources/images/hh.jpg");
   background-repeat: no-repeat;
 }
 </style>
@@ -45,6 +45,8 @@
 		  <td>${cat.getPname()}</td>
 		  <td>${cat.getProductmanufacturer()}</td>
 		  <td>${cat.getProductprice()}</td>
+		  <td><a href="getProductsByid?pid=${cat.pid }"><span class="glyphicon glyphicon-hand-right"></span></a>
+		  
 		  
              <%--  <td>${cat.getCategory()}</td> --%>
 

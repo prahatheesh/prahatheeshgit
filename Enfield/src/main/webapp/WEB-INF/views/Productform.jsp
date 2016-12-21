@@ -30,7 +30,7 @@
     <div class="panel panel-default" >
     <div class="panel-heading">
     <h2>Product Information</h2>
-    <form:form method="POST" commandName="productformobj" action="adminADDS">
+    <form:form method="POST" commandName="productformobj" action="adminADDS" enctype="multipart/form-data">
     <table class="table table-bordered">
      <tr>
         <td><form:label path="pname">Product name</form:label></td>
@@ -54,7 +54,9 @@
     </tr>  
     <tr>
         <td colspan="2">
-            <input type="submit" value="Submit"/>
+        <p><label for="image">choose image</label></p>
+        <p><input name="gt" id="fileToupload" type="file"/></p>
+        <button value="Submit" id="btnSubmit" class="btn btn-lg btn-default btn-block" type="submit">ADD PRODUCTS</button>
         </td>
     </tr>
 </table>  

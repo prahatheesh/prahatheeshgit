@@ -51,7 +51,7 @@
     </tr>  
     <tr>
         <td colspan="2">
-            <input type="submit" id="btnSubmit" value="Submit"/>
+            <button value="Submit" id="btnSubmit" class="btn btn-lg btn-default btn-block" type="submit">REGISTER</button>
         </td>
     </tr>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
