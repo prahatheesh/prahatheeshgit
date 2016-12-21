@@ -6,9 +6,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.web.multipart.MultipartFile;
  
 
 
@@ -30,6 +32,16 @@ public class Product
 	private String pname;
 	@NotEmpty
 	private String category;
+	
+	@Transient
+	private MultipartFile gt; 
+	
+	public MultipartFile getGt() {
+		return gt;
+	}
+	public void setGt(MultipartFile gt) {
+		this.gt = gt;
+	}
 	public int getPid() {
 		return pid;
 	}
