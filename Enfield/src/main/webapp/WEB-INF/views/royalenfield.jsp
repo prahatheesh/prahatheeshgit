@@ -15,7 +15,7 @@
 <style>
  body{
   margin: 0 auto;
-  background-image: url("resources/images/royal-enfield-wallpaper.jpg");
+  background-image: url("resources/images/hh.jpg");
   background-repeat: no-repeat;
 }
 	
@@ -32,7 +32,7 @@ height:400px;
 <body>
 
 
-<div class="container">
+<!-- <div class="container">
 <audio controls>
   <source src="resources/sounds/01.mp3" type="audio/mp3">
 </audio>
@@ -76,7 +76,7 @@ height:400px;
         <span class="sr-only">Next</span>
         </a>
   </div>
-</div>
+</div> -->
 
 
 </body>

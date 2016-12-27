@@ -1,12 +1,14 @@
 package com.enfieldfrontend.controller;
 
 import java.io.IOException;
+
 import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.hibernate.Session;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +23,7 @@ import com.royalmodel.Product;
 import com.royalmodel.User;
 @Controller
 public class Homecontroller  {
- HttpSession session;
+HttpSession session;
 	    private Userdao ud;
 	
 	
@@ -111,6 +113,8 @@ public class Homecontroller  {
 		@RequestMapping("/logout")
 		public String logout()
 		{
+			User user = (User) session.getAttribute("username");
+			session.removeAttribute("username");
 			session.invalidate();
 			return "royalenfield";
 		}

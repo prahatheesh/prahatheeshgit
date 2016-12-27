@@ -18,7 +18,7 @@
   <style>
  body{
   margin: 0 auto;
-  background-image: url("resources/images/hh.jpg");
+  background-image: url("resources/images/ww.jpg");
   background-repeat: no-repeat;
 }
 </style>
