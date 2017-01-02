@@ -6,10 +6,12 @@ import javax.transaction.Transactional;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import com.shoutoutmodel.User;
+import com.shoutoutmodel.Customer;
 
 public class Daoimplimentation implements Daointerface {
+	@Autowired
 private SessionFactory sessionfactory;
 	
 	public SessionFactory getSessionfactory() {
@@ -21,15 +23,14 @@ public void setSessionfactory(SessionFactory sessionfactory) {
 }
 
 @Transactional
-	public void insert(User user) {
-    Session session=sessionfactory.openSession();
-    user.setRoleid("ROLE_USER");
-    user.setEnable(true);
+	public void insert(Customer user) {
+    Session session=this.sessionfactory.getCurrentSession();
+    System.out.println("dao");
     session.save(user);
-    session.flush();
-	session.close();	
-	}
-
+    //session.flush();
+    //session.close();	
+	}/*
+@Transactional
 public void update(User user) {
 	 Session session=sessionfactory.openSession();
 	 session.update(user);
@@ -37,7 +38,7 @@ public void update(User user) {
      session.close();
 	
 }
-
+@Transactional
 public void delete(User user) {
 	 Session session=sessionfactory.openSession();
 	 session.delete(user);
@@ -53,5 +54,5 @@ public List<User> list(String username,String password) {
 	System.out.println(list);
 	return list;
 }
-
+*/
 }

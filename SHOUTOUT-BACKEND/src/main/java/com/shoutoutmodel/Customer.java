@@ -5,8 +5,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "USER")
-public class User {
+public class Customer {
 	@Id
     private String username;
     private String emailaddress;

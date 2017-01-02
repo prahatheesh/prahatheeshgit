@@ -3,7 +3,7 @@ package com.shoutoutbackend;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.shoutoutDAO.Daointerface;
-import com.shoutoutmodel.User;
+import com.shoutoutmodel.Customer;
 
 
 
@@ -12,20 +12,19 @@ public class App {
     {
         @SuppressWarnings("resource")
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-        context.scan("com.royalconfig");
+        context.scan("com.shoutoutconfiguration");
         context.refresh();
-        Daointerface ud=(Daointerface)context.getBean("udao");
-       
-        User add = new User();
-        add.setUsername("");
-        add.setEmailaddress("");
-        add.setPassword("");
-        add.setConfirmpassword("");
-        
-  
-          
-      	ud.insert(add);
-    	ud.update(add);
-        ud.delete(add);
+        Daointerface udao=(Daointerface)context.getBean("udao");
+        System.out.println("check");
+        Customer add = new Customer();
+        add.setUsername("gggc");
+        add.setEmailaddress("vvhvhv");
+        add.setPassword("jyff");
+        add.setConfirmpassword("hjfhjf");
+          add.setRoleid("user");
+          udao.insert(add);
+      	
+    	//ud.update(add);
+       // ud.delete(add);
 }
 }

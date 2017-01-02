@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.shoutoutDAO.Daoimplimentation;
 import com.shoutoutDAO.Daointerface;
-import com.shoutoutmodel.User;
+import com.shoutoutmodel.Customer;
 
 
 @Configuration
@@ -26,10 +26,10 @@ public class Applicationconfiguration {
 	@Bean(name = "dataSource")
 	   public DataSource getDataSource() {
 	       BasicDataSource dataSource = new BasicDataSource();
-	       dataSource.setDriverClassName("org.h2.Driver");
-	       dataSource.setUrl("jdbc:h2:tcp://localhost/~/test");
-	       dataSource.setUsername("sa");
-	       dataSource.setPassword("sa");
+	       dataSource.setDriverClassName("oracle.jdbc.OracleDriver");
+	       dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:XE");
+	       dataSource.setUsername("PRAHATHEESH");
+	       dataSource.setPassword("123");
 	    	       return dataSource;
 	   }
 	@Autowired
@@ -38,7 +38,7 @@ public class Applicationconfiguration {
 	     LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
 	     sessionBuilder.addProperties(getHibrnateProperties());
 	     System.out.println("before");
-	     sessionBuilder.addAnnotatedClasses(User.class);
+	     sessionBuilder.addAnnotatedClasses(Customer.class);
 	 	 return sessionBuilder.buildSessionFactory();
 	   }
 	
@@ -47,7 +47,7 @@ public class Applicationconfiguration {
 		   Properties properties = new Properties();
 		   System.out.println("hellooooo");
 		   properties.put("hibernate.show-sql", "true");
-		   properties.put("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
+		   properties.put("hibernate.dialect", "org.hibernate.dialect.Oracle10gDialect");
 		   properties.put("hibernate.hbm2ddl.auto", "update");
 		   
 		   
@@ -62,8 +62,7 @@ public class Applicationconfiguration {
 	       return transactionManager;
 
 }
-	
-	@Autowired
+
 	@Bean(name="udao")
 	   public Daointerface getUserService()
 	   {
