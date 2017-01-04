@@ -1,13 +1,23 @@
-var app=angular.module("",[]);
-app.controller(ctrl,function($scope,$http,$location,$window)
-		{
+var app=angular.module("register",[]);
+app.controller('ctrl',function($scope,$http,$location,$window){
+	var url="http://"+$window.location.host+"/SHOUTOUT-BACKEND";
+	{
+	$scope.register=function()
+	{
+	$http.post(url+'register'+$scope.name).success(function(data)
+	{
 	
-	var url="http://localhost:8080/SHOUTOUT-BACKEND/"+"/Homecontroller";
+	$log.log(data);
+				
+	});
+	}
+	}
+})
+				
+
 	
-	$scope.register=function shoutout()
 	
 	
 	
 	
-	
-		}
+		
