@@ -20,18 +20,10 @@ import com.shoutoutmodel.Customer;
 
 
 @Configuration
-@ComponentScan("com.shoutoutmodel")
+
 @EnableTransactionManagement
 public class Applicationconfiguration {
-	@Bean(name = "dataSource")
-	   public DataSource getDataSource() {
-	       BasicDataSource dataSource = new BasicDataSource();
-	       dataSource.setDriverClassName("oracle.jdbc.OracleDriver");
-	       dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:XE");
-	       dataSource.setUsername("PRAHATHEESH");
-	       dataSource.setPassword("123");
-	    	       return dataSource;
-	   }
+	
 	@Autowired
 	   @Bean (name="sessionFactory")
 	   public SessionFactory getSessionFactory(DataSource dataSource) {
@@ -41,6 +33,18 @@ public class Applicationconfiguration {
 	     sessionBuilder.addAnnotatedClasses(Customer.class);
 	 	 return sessionBuilder.buildSessionFactory();
 	   }
+	
+	@Bean(name = "dataSource")
+	   public DataSource getDataSource() {
+		System.out.println("ata");
+	       BasicDataSource dataSource = new BasicDataSource();
+	       dataSource.setDriverClassName("oracle.jdbc.OracleDriver");
+	       dataSource.setUrl("jdbc:oracle:thin:@localhost:1521:XE");
+	       dataSource.setUsername("PRAHATHEESH");
+	       dataSource.setPassword("123");
+	    	       return dataSource;
+	   }
+	
 	
 	   private Properties getHibrnateProperties() {
 		 
@@ -64,8 +68,9 @@ public class Applicationconfiguration {
 }
 
 	@Bean(name="udao")
-	   public Daointerface getUserService()
+	   public Daointerface udao()
 	   {
+		System.out.println("jvvvkv");
 		return new Daoimplimentation();
 	   }
 }
