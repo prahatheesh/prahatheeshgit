@@ -5,7 +5,7 @@
  id="WebApp_ID" version="3.1">
    
 
-  <display-name>Spring Mvc Application</display-name>
+  <display-name> Application</display-name>
    <servlet>
       <servlet-name>Dispatcher</servlet-name>
       <servlet-class>
@@ -18,4 +18,10 @@
       <servlet-name>Dispatcher</servlet-name>
       <url-pattern>/</url-pattern> 
    </servlet-mapping>
+   
+   <context-param>
+   <param-name>contextConfiglocation</param-name>
+   <param-value>WEB-INF/Dispatcher-servlet</param-value>
+   </context-param>
+   
    </web-app>
