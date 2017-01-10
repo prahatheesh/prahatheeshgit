@@ -39,12 +39,12 @@ HttpSession session;
 	
 	    @RequestMapping("/")
         public ModelAndView hello() {	      
-        return new ModelAndView("royalenfield");
+        return new ModelAndView("index");
         }
 
 		@RequestMapping("/home")
 	    public ModelAndView helloworld() {	      
-	      return new ModelAndView("royalenfield");
+	      return new ModelAndView("index");
 	    }
 
 		@RequestMapping("/login")
