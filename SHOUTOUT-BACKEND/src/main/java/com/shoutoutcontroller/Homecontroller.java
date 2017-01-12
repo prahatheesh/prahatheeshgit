@@ -18,8 +18,7 @@ public class Homecontroller {
 
 	 public Homecontroller()
 	{
-		 try
-		 {
+		 
 	@SuppressWarnings("resource")
 	AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
     context.scan("com.shoutoutconfiguration");
@@ -27,19 +26,19 @@ public class Homecontroller {
     context.refresh();
      udao=(Daointerface)context.getBean("udao");
 		 }
-		 catch(Exception e)
-		 {
-			 e.printStackTrace();
-		 }
-	}
-	@RequestMapping(value="/register/{username}",method=RequestMethod.POST,headers="Accept=application/json")
-			public ResponseEntity<Customer> register(@PathVariable String username){
-		System.out.println("insie register");
+		
+	
+	@RequestMapping(value="/reg/{username}/{emailaddress}/{password}/{mobilenumber}",method=RequestMethod.POST,headers="Accept=application/json")
+			public ResponseEntity reg(@PathVariable String username,@PathVariable String emailaddress,@PathVariable String password,@PathVariable String mobilenumber){
+		System.out.println("inside register");
 		Customer custom=new Customer();
 		custom.setUsername(username);
+		custom.setEmailaddress(emailaddress);
+		custom.setPassword(password);
+		custom.setMobilenumber(mobilenumber);
 		udao.insert(custom);
 		
-		return new ResponseEntity<Customer>(HttpStatus.OK);
+		return new ResponseEntity(HttpStatus.OK);
 	 
 	
 	}

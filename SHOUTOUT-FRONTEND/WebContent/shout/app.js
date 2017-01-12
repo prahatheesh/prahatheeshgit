@@ -3,9 +3,10 @@ app.controller('ctrl',function($scope,$http,$location,$window)
 		{
 	var url="http://"+$window.location.host+"/SHOUTOUT-BACKEND";
 	alert("ctrl")
-	$scope.register=function reg()
+	$scope.reg=function reg()
 	{
-	$http.post(url+'/register/'+$scope.username).success(function(data)
+		alert("check");
+	$http.post(url+'/register/'+$scope.username+'/'+$scope.emailaddress+'/'+$scope.password+'/'+$scope.mobilenumber).success(function(data)
 	{
 	alert("controller")
 	

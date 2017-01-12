@@ -27,15 +27,20 @@ public void setSessionfactory(SessionFactory sessionfactory) {
     Session session=this.sessionfactory.getCurrentSession();
     System.out.println("dao");
     session.save(user);
-    //session.flush();
+    System.out.println(user);
+    // session.flush();
     //session.close();	
-	}/*
+	}
+
+
+
+/*
 @Transactional
 public void update(User user) {
 	 Session session=sessionfactory.openSession();
 	 session.update(user);
 	 session.flush();
-     session.close();
+     session.close()
 	
 }
 @Transactional

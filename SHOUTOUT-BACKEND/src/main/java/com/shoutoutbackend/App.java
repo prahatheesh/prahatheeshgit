@@ -20,9 +20,9 @@ public class App {
         add.setUsername("gggc");
         add.setEmailaddress("vvhvhv");
         add.setPassword("jyff");
-        add.setConfirmpassword("hjfhjf");
+        add.setMobilenumber("hjfhjf");
           add.setRoleid("user");
-          udao.insert(add);
+         udao.insert(add);
       	
     	//ud.update(add);
        // ud.delete(add);

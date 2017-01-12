@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+         
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="shout/app.js"></script>
+    </head>
+   
+    <body ng-app="register">
+<div ng-controller="ctrl">
+
+
+<div class="container">
+  <div id="Signup" class="mailbox col-sm-6 col-sm-offset-3">
+  <div class="panel panel-default">
+  <div class="panel-heading">  
+
+  <table>
+  <h2>REGISTER</h2>
+  
+  <table class="table table-bordered">
+   
+    <tr>
+        <td><label path="username">username</label></td>
+        <td><input ng-model="username" type="text" required="true"  /></td>
+        
+    </tr>
+    <tr>
+        <td><label path="emailaddress">emailaddress</label></td>
+        <td><input ng-model="emailaddress" type="email" required="true" /></td>
+    </tr>
+    <tr>
+        <td><label path="password">password</label></td>
+        <td><input ng-model="password" type="password" required="true" /></td>
+    </tr>
+    <tr>
+        <td><label path="mobilenumber">mobile number</label></td>
+        <td><input ng-model="mobilenumber" type="mobilephone" required="true" /></td>
+    </tr>
+    
+   <tr>
+        <td colspan="2">
+            <input type="button" value="register" ng-click="reg()"/>
+        </td>
+    </tr>
+</table>  
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

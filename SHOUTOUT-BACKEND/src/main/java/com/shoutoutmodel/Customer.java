@@ -1,30 +1,20 @@
 package com.shoutoutmodel;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 public class Customer {
 	@Id
-    private String username;
-    private String emailaddress;
-    private String password;
-    private String confirmpassword;
+	private String  username;
+    private String  emailaddress;
+    private String  password;
+    private String  mobilenumber;
     private boolean enable;
-    private String roleid;
-	public boolean isEnable() {
-		return enable;
-	}
-	public void setEnable(boolean enable) {
-		this.enable = enable;
-	}
-	public String getRoleid() {
-		return roleid;
-	}
-	public void setRoleid(String roleid) {
-		this.roleid = roleid;
-	}
+    private String  roleid;
 	public String getUsername() {
 		return username;
 	}
@@ -43,11 +33,24 @@ public class Customer {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getConfirmpassword() {
-		return confirmpassword;
+	public String getMobilenumber() {
+		return mobilenumber;
 	}
-	public void setConfirmpassword(String confirmpassword) {
-		this.confirmpassword = confirmpassword;
+	public void setMobilenumber(String mobilenumber) {
+		this.mobilenumber = mobilenumber;
 	}
+	public boolean isEnable() {
+		return enable;
+	}
+	public void setEnable(boolean enable) {
+		this.enable = enable;
+	}
+	public String getRoleid() {
+		return roleid;
+	}
+	public void setRoleid(String roleid) {
+		this.roleid = roleid;
+	}
+	
 	
 }
