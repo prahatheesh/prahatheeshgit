@@ -23,26 +23,26 @@ public void setSessionfactory(SessionFactory sessionfactory) {
 }
 
 @Transactional
-	public void insert(Customer user) {
+	public void save(Customer user) {
     Session session=this.sessionfactory.getCurrentSession();
     System.out.println("dao");
     session.save(user);
     System.out.println(user);
-    // session.flush();
+    session.flush();
     //session.close();	
 	}
 
 
 
-/*
+
 @Transactional
-public void update(User user) {
+public void update(Customer user) {
 	 Session session=sessionfactory.openSession();
 	 session.update(user);
 	 session.flush();
-     session.close()
+     session.close();
 	
-}
+}/*
 @Transactional
 public void delete(User user) {
 	 Session session=sessionfactory.openSession();

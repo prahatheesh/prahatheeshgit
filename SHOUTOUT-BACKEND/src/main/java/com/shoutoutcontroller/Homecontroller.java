@@ -25,25 +25,22 @@ public class Homecontroller {
     System.out.println("config");
     context.refresh();
      udao=(Daointerface)context.getBean("udao");
+     System.out.println("fig");
 		 }
 		
-	
-	@RequestMapping(value="/reg/{username}/{emailaddress}/{password}/{mobilenumber}",method=RequestMethod.POST,headers="Accept=application/json")
-			public ResponseEntity reg(@PathVariable String username,@PathVariable String emailaddress,@PathVariable String password,@PathVariable String mobilenumber){
-		System.out.println("inside register");
-		Customer custom=new Customer();
-		custom.setUsername(username);
-		custom.setEmailaddress(emailaddress);
-		custom.setPassword(password);
-		custom.setMobilenumber(mobilenumber);
-		udao.insert(custom);
-		
-		return new ResponseEntity(HttpStatus.OK);
+@RequestMapping(value="ch",method=RequestMethod.POST)
+
+public ResponseEntity Ch(){
+	System.out.println("checking");
+	return new ResponseEntity(HttpStatus.OK) ;
+}
 	 
-	
+
+
+
+		
+		
 	}
 	
 	
-	
-	
-}
+

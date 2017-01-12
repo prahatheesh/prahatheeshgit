@@ -2,11 +2,11 @@ var app=angular.module("register",[]);
 app.controller('ctrl',function($scope,$http,$location,$window)
 		{
 	var url="http://"+$window.location.host+"/SHOUTOUT-BACKEND";
-	alert("ctrl")
-	$scope.reg=function reg()
+	
+	$scope.ch=function()
 	{
 		alert("check");
-	$http.post(url+'/register/'+$scope.username+'/'+$scope.emailaddress+'/'+$scope.password+'/'+$scope.mobilenumber).success(function(data)
+	$http.post(url+'/ch').success(function(data)
 	{
 	alert("controller")
 	

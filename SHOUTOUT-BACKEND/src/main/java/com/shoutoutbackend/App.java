@@ -16,15 +16,17 @@ public class App {
         context.refresh();
         Daointerface udao=(Daointerface)context.getBean("udao");
         System.out.println("check");
-        Customer add = new Customer();
-        add.setUsername("gggc");
-        add.setEmailaddress("vvhvhv");
-        add.setPassword("jyff");
-        add.setMobilenumber("hjfhjf");
-          add.setRoleid("user");
-         udao.insert(add);
+        Customer ch = new Customer();
+        ch.setEmailaddress("hvhg@fht.hj");
+        ch.setEnable(true);
+        ch.setMobilenumber("123456");
+        ch.setPassword("yyy");
+        ch.setRoleid("User");
+        ch.setUsername("praggy");
+        udao.save(ch);
       	
-    	//ud.update(add);
+    	//udao.update(add);
+    	System.out.println("last");
        // ud.delete(add);
 }
 }
