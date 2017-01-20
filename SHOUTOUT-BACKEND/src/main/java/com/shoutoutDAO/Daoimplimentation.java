@@ -28,7 +28,7 @@ public void setSessionfactory(SessionFactory sessionfactory) {
     System.out.println("dao");
     session.save(user);
     System.out.println(user);
-    session.flush();
+    //session.flush();
     //session.close();	
 	}
 
