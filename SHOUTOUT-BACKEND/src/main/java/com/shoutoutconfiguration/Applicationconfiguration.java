@@ -66,7 +66,7 @@ public class Applicationconfiguration {
 	       return transactionManager;
 
 }
-
+    @Autowired
 	@Bean(name="udao")
 	   public Daointerface udao()
 	   {

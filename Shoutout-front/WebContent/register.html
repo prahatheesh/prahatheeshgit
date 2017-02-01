@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+         
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="resources/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </head>
+<!-- <body ng-app="register" class="ng-cloak">  -->
+<div ng-controller="controller">
+<div class="container"> 
+    <div id="signin" class="mainbox col-sm-6 col-sm-offset-3">   
+    <div class="panel panel-default" >
+    <div class="panel-heading">
+      
+        <h1>Sign Up</h1>
+            <label for="username">UserName:</label>
+          <input type="text" class="form-control" id="username" ng-model="username" name="username" required="true">
+          
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" ng-model="email" name="email" required="true">
+          
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="password" ng-model="password"  required="true">
+          
+           <label for="mobileno">MobileNo:</label>
+          <input type="mobileno" class="form-control" id="mobileno" ng-model="mobileno" required="true">
+        
+        <button type="submit" ng-click ="registerr()">Sign Up</button>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+ 
+    </body>
+</html>

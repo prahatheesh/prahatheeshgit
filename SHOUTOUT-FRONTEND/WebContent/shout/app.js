@@ -1,39 +1,73 @@
-var app=angular.module('register',[]);
-app.controller('ctrl',function($scope,$http,$location,$window)
+var app=angular.module("register",['ngRoute']); 
+
+app.controller('controller',function($scope,$http,$route,$location,$window)
+		
 		{
-	var url="http://"+$window.location.host+"/SHOUTOUT-BACKEND";
-	alert("check");
-	$scope.register=function()
+var url="http://"+$window.location.host+"/SHOUTOUT-BACKEND";
+        
+         alert("welcome to login");
+
+	           $scope.loginn=function()
 	{
-    alert("reg")
-	$http.post(url+'/register/'+$scope.username+'/'+$scope.emailaddress+'/'+$scope.password+'/'+$scope.mobilenumber).success(function(data)
+         alert("log bef post");
+	           
+               $http.post(url+'/login/'+$scope.username+'/'+$scope.password).success(function(data)
 	{
-	alert("controller")
-	
-	$log.log(data);
-				
+	console.log("This is inside loginn function");
+       
+	     alert("log aft post");
+	     
+	     
+	    
+	   {
+		   
+		   $window.location.href = "http://localhost:8090/SHOUTOUT-FRONTEND/index.html";
+	   }
+       
+         console.log(data);
+	      	
+      }).error(function()
+	{
+			   $window.alert("wrong username and password");
 	});
 	}
 	
-})
+	
+    
+	           
+	           $scope.registerr=function()
+	{
+     alert("before post");
+	            $http.post(url+'/register').success(function(data)
+	{
+     alert("after post");
+                $location.path('/login');
+                $scope.login=function()
+    {
+	            $log.log(data);
+    }			
+	})
+	}
+	});
+	  
+
+          app.config(function($routeProvider){
+		  $routeProvider.when("/login",{templateUrl: "login.html"})
+		  $routeProvider.when("/register",{templateUrl:"register.html"})
+		  $routeProvider.when("/index",{templateUrl: "index.html"});
+	});
+
+		
+	    
+	
+	
+	
 		
 
-/*var app = angular.module('register', []);
-app.controller('ctrl', function($scope) {
-   // $scope.firstName= "John";
-   // $scope.lastName= "Doe";
-    
-    $scope.register=function register()
-	{
-    alert("reg")
-    console.log("insie register");
-	$http.post(url+'/register/'+$scope.username+'/'+$scope.emailaddress+'/'+$scope.password+'/'+$scope.mobilenumber).success(function(data)
-	{
-	alert("controller")
 	
-	$log.log(data);
-				
-	});
-    
-	}
-});*/
+
+
+	
+	
+	
+		

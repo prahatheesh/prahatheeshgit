@@ -14,7 +14,7 @@ public class App {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.scan("com.shoutoutconfiguration");
         context.refresh();
-        Daointerface udao=(Daointerface)context.getBean("udao");
+        Daointerface ud=(Daointerface)context.getBean("udao");
         System.out.println("check");
         Customer ch = new Customer();
         ch.setEmailaddress("hvhg@fht.hj");
@@ -23,7 +23,7 @@ public class App {
         ch.setPassword("yyy");
         ch.setRoleid("User");
         ch.setUsername("praggy");
-        udao.save(ch);
+        ud.save(ch);
       	
     	//udao.update(add);
     	System.out.println("last");

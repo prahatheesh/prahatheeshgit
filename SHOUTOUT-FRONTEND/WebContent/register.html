@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
@@ -6,31 +7,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+<!--   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script> -->
+<!--   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script type="text/javascript" src="shout/app.js"></script>
+ 
     </head>
-    
-    <body ng-app="register"> 
-<div ng-controller="ctrl">
+<!-- <body ng-app="register" class="ng-cloak">  -->
+<div ng-controller="controller">
       
         <h1>Sign Up</h1>
-          <label for="username">UserName:</label>
+            <label for="username">UserName:</label>
           <input type="text" id="username" ng-model="username" name="username" required="">
           
-          <label for="emailaddress">Emailaddress:</label>
-          <input type="email" ng-model="email" name="emailaddress" required="">
+          <label for="email">Email:</label>
+          <input type="emailaddress" ng-model="emailaddress" name="emailaddress" required="">
           
           <label for="password">Password:</label>
           <input type="password" id="password" ng-model="password"  required="">
           
-           <label for="mobilenumber">MobileNumber:</label>
-          <input type="mobilenumber" id="mobilenumber" ng-model="mobileno" required="">
+           <label for="mobilenumber">MobileNo:</label>
+          <input type="mobilenumber" id="mobilenumber" ng-model="mobilenumber" required="">
         
         
         
-        <button type="submit" ng-click ="register()">Sign Up</button>
+        <button type="submit" ng-click ="registerr()">Sign Up</button>
       </div>
+ <!--      <div ng-view></div> -->
     </body>
 </html>
-    

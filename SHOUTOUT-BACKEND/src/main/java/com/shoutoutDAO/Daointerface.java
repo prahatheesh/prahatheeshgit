@@ -9,5 +9,5 @@ public interface Daointerface {
 	public void save(Customer user);
    public void update(Customer user);
     //public void delete(User user); 
-    //public List<User> list(String username,String password);
+    public List<Customer> list(String username,String password);
 }
